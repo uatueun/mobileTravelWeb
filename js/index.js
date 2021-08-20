@@ -95,4 +95,18 @@ window.addEventListener('load', function() {
         }, 2000);
 
     })
+
+    //返回頂部製作
+    var goBack = document.querySelector('.goBack');
+    var nav = document.querySelector('.local-nav');
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset >= nav.offsetTop) {
+            goBack.style.display = 'block';
+        } else {
+            goBack.style.display = 'none';
+        }
+    })
+    goBack.addEventListener('click', function() {
+        window.scroll(0, 0);
+    })
 })
